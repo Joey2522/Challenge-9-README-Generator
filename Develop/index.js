@@ -47,6 +47,10 @@ inquirer
             message: 'List all collaborators.',
         },
     ])
+    
+    // TODO: Create a function to write README file
+    // function writeToFile(fileName, data) {}   
+    
     .then((data) => {
         const fileName = `${data.title.toLowerCase().split(' ').join('')}.json`;
 
@@ -54,8 +58,7 @@ inquirer
         err ? console.log(err) : console.log('Success!'));
     });
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+
 
 // TODO: Create a function to initialize app
 // function init() {}
