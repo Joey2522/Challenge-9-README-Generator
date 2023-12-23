@@ -7,6 +7,11 @@ const fs = require('fs');
 inquirer
     .prompt([
         {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of your app?',
+        },
+        {
             Type: 'input',
             name: 'description',
             message: 'Write your app description.',
@@ -42,6 +47,12 @@ inquirer
             message: 'List all collaborators.',
         },
     ])
+    .then((data) => {
+        const fileName = `${data.title.toLowerCase().split(' ').join('')}.json`;
+
+        fs.writeFile(fileName, JSON.stringify(date, null, '\t'), (err) =>
+        err ? console.log(err) : console.log('Success!'));
+    });
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
