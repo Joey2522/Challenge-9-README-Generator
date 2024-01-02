@@ -46,6 +46,17 @@ inquirer
             name: 'collaborators',
             message: 'List all collaborators.',
         },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your github username?.',
+        },
+        {
+            type: 'list',
+            message: 'Choose your license.',
+            name: 'license',
+            choices: ['MIT License', 'Apache License 2.0', 'GNU General Public License (GPL) v3', 'Mozilla Public License 2.0', 'BSD 3-Clause License'],     
+        },        
     ])
     
     // TODO: Create a function to write README file
@@ -54,8 +65,9 @@ inquirer
     .then((data) => {
         const fileName = `${data.title.toLowerCase().split(' ').join('')}.json`;
 
-        fs.writeFile(fileName, JSON.stringify(date, null, '\t'), (err) =>
-        err ? console.log(err) : console.log('Success!'));
+        fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) =>
+            err ? console.log(err) : console.log('Success!')
+        );
     });
 
 
