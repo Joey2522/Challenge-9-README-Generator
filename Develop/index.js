@@ -77,20 +77,36 @@ const questions = [
     ];
 
     
-// // Function to write README file
-//     .then((data) => {
-//         const fileName = `exampleREADME.md`;
+// Function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("Good work! Your exREADME.md file has been generated")
+    });
+};
 
-//         fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) =>
-//             err ? console.log(err) : console.log('Success! Your README.md file has been generated.')
-//         );
-//     });
+const writeFileAsync = util.promisify(writeToFile);
+
 
 // The function to initialize app
     async function init() { 
         try {
             const userResponses = await inquirer.prompt(questions);
             console.log("Your respones: ", userResponses);
+            console.log("Thank you for your responses! Fetching your GitHub data next...");
+
+            const userInfo = await api.getUser(userResponses);
+            console.log("Your GitHub user info: ", userInfo);
+
+            console.log("Generating your exREADME next...")
+            const markdown = generateMarkdown(userResponses, userInfo);
+            console.log(markdown);
+
+            await writeFileAsync('exREADME.md', markdown);
+
         } catch (error) {
             console.log(error);
         }

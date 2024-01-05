@@ -1,8 +1,6 @@
 const license = 'MIT'
 const licenseBadge = renderLicenseBadge(license);
 const licenseLink = renderLicenseLink(license);
-console.log(licenseBadge);
-console.log(licenseLink);
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -63,5 +61,8 @@ function generateMarkdown(data) {
 
 `;
 }
+
+console.log(licenseBadge);
+console.log(licenseLink);
 
 module.exports = generateMarkdown;
