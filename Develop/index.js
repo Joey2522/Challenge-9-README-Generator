@@ -15,18 +15,12 @@ const questions = [
             name: 'title',
             message: 'What is the title of your project?',
             default: 'Project Title',
-            validate: function (answer) {
-                if (answer.length < 1) {
-                    return console.log("A valid project title is required.");
-                }
-                return true;
-            }
         },
         {
             type: 'input',
             name: 'repo',
             message: 'What is the name of your GitHub repo?',
-            default: 'readme-generator',
+            default: 'The repo name goes here.',
         },
         {
             Type: 'input',
@@ -36,32 +30,38 @@ const questions = [
         {
             type: 'input',
             name: 'motivation',
-            message: 'What was your motivation to develop this project?',
+            message: 'What was your motivation to develop this project? Skip if n/a.',
+            default: 'Not Applicable',
         },
         {
             type: 'input',
             name: 'problem',
-            message: 'What problem does this porject solve?',
+            message: 'What problem does this project solve? Skip if n/a.',
+            default: 'Not Applicable',
         },
         {
             type: 'input',
             name: 'learn',
-            message: 'What did you learn?',
+            message: 'What did you learn? Skip if n/a.',
+            default: 'Not Applicable',
         },
         {
             type: 'input',
             name: 'installation',
-            message: 'If applicable what steps are required to install your project?',
+            message: 'If applicable what steps are required to install your project? Skip if n/a.',
+            default: 'Not Applicable',
         },
         {
             type: 'input',
             name: 'instructions',
-            message: 'Provide instructions and/or examples for use.',
+            message: 'Provide instructions and/or examples for use. Skip if n/a.',
+            default: 'Not Applicable',
         },
         {
             type: 'input',
             name: 'collaborators',
-            message: 'List all collaborators.',
+            message: 'List all collaborators. Skip if n/a.',
+            default: 'Not Applicable',
         },
         {
             type: 'input',
