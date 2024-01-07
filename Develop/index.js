@@ -84,7 +84,7 @@ function writeToFile(fileName, data) {
           return console.log(err);
         }
       
-        console.log("Good work! Your exREADME.md file has been generated")
+        console.log("Good work! Your README.md file has been generated")
     });
 };
 
@@ -101,11 +101,11 @@ const writeFileAsync = util.promisify(writeToFile);
             const userInfo = await api.getUser(userResponses);
             console.log("Your GitHub user info: ", userInfo);
 
-            console.log("Generating your exREADME next...")
+            console.log("Generating your README next...")
             const markdown = generateMarkdown(userResponses, userInfo);
             console.log(markdown);
 
-            await writeFileAsync('exREADME.md', markdown);
+            await writeFileAsync('README.md', markdown);
 
         } catch (error) {
             console.log(error);
