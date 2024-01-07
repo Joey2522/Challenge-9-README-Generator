@@ -9,6 +9,9 @@
   ## Installation
   I had to install node.js “inquirer” in order to create this README generator.
 
+  ## Usage
+  Here is a link to a YouTube video demonstrating the generator.
+
   ## Motivation
   I wanted to help my fellow coders with a quick and easy way to generate a professional README.
 
