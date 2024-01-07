@@ -1,28 +1,28 @@
-# jldsjf
+# Project Title
 
   ## Repo Name
-  ksjfklsdj
+  The repo name goes here.
   
   ## Description
-  jklsadjlf
+  
 
   ## Installation
-  ljl
+  Not Applicable
 
   ## Motivation
-  jkljsdklf
+  Not Applicable
 
   ## What Problem Does This Project Solve
-  jklj
+  Not Applicable
 
   ## What I Learned
-  kljkl
+  Not Applicable
 
   ## Instructions
-  lkjl
+  Not Applicable
 
   ## Contributors
-  kljlk
+  Not Applicable
 
   ## My GitHub
   "https://github.com/joey2522"
